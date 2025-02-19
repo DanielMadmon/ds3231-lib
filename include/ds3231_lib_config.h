@@ -1,0 +1,7 @@
+#pragma once
+
+
+#define CONFIG_USE_I2C_PORT
+#define CONFIG_USE_I2C_BUS
+#define CONFIG_USE_I2C_DEVICE
+#define CONFIG_USE_UTIL
