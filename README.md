@@ -13,7 +13,7 @@ a lightweight driver for the DS3231 rtc module.
 #### init driver
 
 ```c
-  ds3231_dev_t device;
+  ds3231_dev_t dev;
   bool result = ds3231_init(&dev,sda_pin,scl_pin,i2c_port,i2c_init_flag);
 ```
 
