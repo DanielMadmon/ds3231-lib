@@ -83,7 +83,7 @@ typedef enum{
 
 
 /**
- * initialize i2c driver,set input pins if not null. and set initial values in ds3231 ctrl register
+ * initialize i2c driver,set input pins if not null.
  * 
  * @param i2c_initialized indicates that i2c was initialized before and already valid in dev struct
  */

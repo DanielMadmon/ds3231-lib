@@ -25,7 +25,7 @@ static const uint8_t tm1637_symbol_table[10] = {
 }; //Taken from https://crates.io/crates/tm1637-embedded-hal
 
 
-bool ds3231_decimal_to_tm1637(uint8_t decimal_number,uint8_t* tm1637_number, uint8_t byte_size_tm1637){
+bool ds3231_decimal_to_tm1637(uint8_t decimal_number,uint8_t* tm1637_number, uint8_t byte_size_tm1637,bool dot){
     if(decimal_number > 99 || NULL == tm1637_number || 0x02u < byte_size_tm1637){
         return false;
     }else{
@@ -37,6 +37,9 @@ bool ds3231_decimal_to_tm1637(uint8_t decimal_number,uint8_t* tm1637_number, uin
         }
         tm1637_number[0] = tm1637_symbol_table[tens];
         tm1637_number[1] = tm1637_symbol_table[temp_num];
+        if(dot){
+            tm1637_number[1] |= 0x80;
+        }
         return true;
     }
 }

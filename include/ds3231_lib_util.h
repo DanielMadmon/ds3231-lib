@@ -16,4 +16,4 @@
  * 
  * @returns true on success false on fail
  */
-bool ds3231_decimal_to_tm1637(uint8_t decimal_number,uint8_t* tm1637_number, uint8_t byte_size_tm1637);
+bool ds3231_decimal_to_tm1637(uint8_t decimal_number,uint8_t* tm1637_number, uint8_t byte_size_tm1637,bool dot);
